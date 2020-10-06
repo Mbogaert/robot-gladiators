@@ -96,7 +96,8 @@ for(var i = 0; i < enemyNames.length; i++) {
 
     //pass the pickedEnemyName variable's value into the fight function, where it will asume the value of the enemyName parameter
     fight(pickedEnemyName);
-  } if (playerHealth <= 0) {
+  } 
+  if (playerHealth <= 0) {
     window.alert("You have lost your robot in battle! Game Over!");
     break;
   }
