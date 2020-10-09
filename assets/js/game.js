@@ -1,4 +1,4 @@
-// Game States
+// Game States!
 // "WIN" - Player robot has defeated all enemy robots
 //    * Fight all enemy robotss
 //    * Defeat each enemy robots
