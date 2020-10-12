@@ -1,11 +1,5 @@
 "use strict"; // makes it so you can't use a variable if it isn't defined
 
-// Game States!
-// "WIN" - Player robot has defeated all enemy robots
-//    * Fight all enemy robotss
-//    * Defeat each enemy robots
-// "LOSE" - Player robot's health is zero or less
-
 // create function
 var fight = function(enemy) {
 
@@ -85,13 +79,10 @@ for(var i = 0; i < enemyInfo.length; i++) {
   if (playerInfo.health > 0) {
     //let user know what round, remember array starts at 0 so it needs to have 1 added to it
     window.alert("Welcome to Robot Gladiators! Round " + ( i + 1 ) );
-
     //pick new enemy to fight based on the index of the enemyNames array
     var pickedEnemyObj = enemyInfo[i];
     //reset enemy health before new fight with randomized health value between 40-60
     pickedEnemyObj.health = randomNumber(40, 60);
-    //use debugger to pause script from running and check what's going on at that moment in the code
-    //debugger;
 
     //pass the pickedEnemyName variable's value into the fight function, where it will asume the value of the enemyName parameter
     fight(pickedEnemyObj);
@@ -177,8 +168,21 @@ var randomNumber = function(min, max) {
   return value;
 };
 
+// function to set name
+var getPlayerName = function() {
+  var name = "";
+
+  while (name === "" || name === null) {
+    name = prompt("what is your robot's name?");
+  }
+
+
+  console.log("Your robot's name is " + name);
+  return name;
+}
+
 var playerInfo = {
-  name: window.prompt("What is your robot's name?"),
+  name: getPlayerName(),
   health: 100,
   attack: 10,
   money: 10,
