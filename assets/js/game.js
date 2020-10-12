@@ -1,3 +1,5 @@
+"use strict"; // makes it so you can't use a variable if it isn't defined
+
 // Game States!
 // "WIN" - Player robot has defeated all enemy robots
 //    * Fight all enemy robotss
